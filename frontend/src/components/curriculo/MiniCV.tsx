@@ -1,0 +1,37 @@
+import Image from "next/image"
+
+export default function MiniCV() {
+	return (
+		<div className="flex-1 flex flex-col-reverse gap-6 md:flex-row lg:flex-col-reverse xl:flex-row items-center md:items-start lg:items-center xl:items-start bg-black border border-zinc-800 rounded-2xl px-6 pt-6">
+			<div className="relative min-w-72 h-64 xl:self-end">
+				<Image src="/minha-foto.png" alt="Foto de perfil" fill />
+			</div>
+			<div className="flex flex-col gap-5 self-center py-6 items-center  md:items-start lg:items-center xl:items-start">
+				<div className="flex flex-col items-center md:items-start lg:items-center xl:items-start">
+					<span
+						className="
+                            bg-gradient-to-r from-red-500 via-white to-white
+                            text-transparent bg-clip-text text-2xl font-bold
+                        "
+					>
+						Dgeison Peixoto
+					</span>
+					<span>Engenheiro de Dados</span>
+				</div>
+				<p className="text-sm text-center md:text-left lg:text-center xl:text-left">
+					**Dgeison Serrão Peixoto** é engenheiro de dados com ampla
+					experiência em migração e desenvolvimento de softwares
+					voltados para dados. Atua com **Python e SQL**, utilizando
+					**SparkSQL no AWS EMR Studio**, para lidar com grandes
+					volumes de dados de forma eficiente. Possui expertise em
+					**modelagem de dados, otimização de consultas e criação de
+					processos escaláveis**. Além disso, trabalha com **FastAPI e
+					PostgreSQL**, desenvolvendo soluções robustas para
+					integração de dados. Tem experiência com **Scrum e Jira**
+					para gestão de projetos e utiliza **Confluence** para
+					documentação técnica.
+				</p>
+			</div>
+		</div>
+	)
+}

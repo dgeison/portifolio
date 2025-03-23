@@ -1,0 +1,19 @@
+const baseUrl = process.env.NEXT_PUBLIC_API_URL
+
+export async function httpGet(url: string) {
+	const response = await fetch(normalizaUrl(`${baseUrl}${url}`))
+	return response.json()
+}
+
+// function normalizaUrl(url: string) {
+//     const protocolo = url.split(':')[0]
+//     const restante = url.split(':')[1]
+//     return `${protocolo}://${restante.replaceAll(/\/{2,}/g,"/")}`
+// }
+
+
+function normalizaUrl(url: string) {
+    const urlObj = new URL(url);
+    urlObj.pathname = urlObj.pathname.replace(/\/{2,}/g, "/");
+    return urlObj.toString();
+}

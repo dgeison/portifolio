@@ -1,6 +1,6 @@
+import Tecnologia from "../tecnologia/Tecnologia"
 import { Nivel } from "./Nivel"
 import { Tipo } from "./Tipo"
-import Tecnologia from "../tecnologia/Tecnologia"
 
 export default interface Projeto {
 	id: number
@@ -10,6 +10,6 @@ export default interface Projeto {
 	tipo: Tipo
 	nivel: Nivel
 	repositorio: string
-	destacado: boolean
+	destaque: boolean
 	tecnologias: Tecnologia[]
 }
